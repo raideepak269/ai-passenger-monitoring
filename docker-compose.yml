@@ -1,0 +1,36 @@
+services:
+  airport-ai-dashboard:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: airport-ai-person-detection:latest
+    container_name: airport-ai-dashboard
+    restart: unless-stopped
+    env_file:
+      - .env
+    environment:
+      PERSON_DETECT_DASHBOARD_ENABLED: "true"
+      PERSON_DETECT_DASHBOARD_HOST: "0.0.0.0"
+      PERSON_DETECT_SHOW_WINDOW: "false"
+      PERSON_DETECT_ALERT_LOG_PATH: "/app/data/alerts.log"
+      PERSON_DETECT_DATABASE_PATH: "/app/data/alerts.db"
+      PERSON_DETECT_OUTPUT_PATH: "/app/data/outputs/person_detection.mp4"
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./data:/app/data
+    healthcheck:
+      test:
+        [
+          "CMD",
+          "python",
+          "-c",
+          "from urllib.request import urlopen; response = urlopen('http://127.0.0.1:5000/login', timeout=5); raise SystemExit(0 if response.status == 200 else 1)",
+        ]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 45s
+    # Uncomment for a local USB webcam on Linux:
+    # devices:
+    #   - /dev/video0:/dev/video0

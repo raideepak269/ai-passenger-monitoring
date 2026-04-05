@@ -1,0 +1,19 @@
+2026-04-05 11:55:56,585 | INFO | person_detection.app | Starting webcam person detection and DeepSORT tracking with model 'yolov8n.pt'.
+2026-04-05 11:55:56,606 | WARNING | person_detection.app | Both show_window and save_output are disabled. The app will run headless until interrupted.
+F:\Projects\Airport_Ai\.venv\Lib\site-packages\deep_sort_realtime\embedder\embedder_pytorch.py:6: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  import pkg_resources
+2026-04-05 11:56:09,466 | INFO | deep_sort_realtime.embedder.embedder_pytorch | MobileNetV2 Embedder for Deep Sort initialised
+2026-04-05 11:56:09,472 | INFO | deep_sort_realtime.embedder.embedder_pytorch | - gpu enabled: False
+2026-04-05 11:56:09,473 | INFO | deep_sort_realtime.embedder.embedder_pytorch | - half precision: False
+2026-04-05 11:56:09,473 | INFO | deep_sort_realtime.embedder.embedder_pytorch | - max batch size: 16
+2026-04-05 11:56:09,474 | INFO | deep_sort_realtime.embedder.embedder_pytorch | - expects BGR: True
+2026-04-05 11:56:09,653 | INFO | deep_sort_realtime.deepsort_tracker | DeepSort Tracker initialised
+2026-04-05 11:56:09,654 | INFO | deep_sort_realtime.deepsort_tracker | - max age: 30
+2026-04-05 11:56:09,655 | INFO | deep_sort_realtime.deepsort_tracker | - appearance threshold: 0.2
+2026-04-05 11:56:09,656 | INFO | deep_sort_realtime.deepsort_tracker | - nms threshold: OFF
+2026-04-05 11:56:09,656 | INFO | deep_sort_realtime.deepsort_tracker | - max num of appearance features: None
+2026-04-05 11:56:09,657 | INFO | deep_sort_realtime.deepsort_tracker | - overriding track class : No
+2026-04-05 11:56:09,658 | INFO | deep_sort_realtime.deepsort_tracker | - today given : No
+2026-04-05 11:56:09,659 | INFO | deep_sort_realtime.deepsort_tracker | - in-build embedder : Yes
+2026-04-05 11:56:09,659 | INFO | deep_sort_realtime.deepsort_tracker | - polygon detections : No
+2026-04-05 11:56:11,973 | INFO | person_detection.app | Webcam opened on index 0. Use Ctrl+C to stop the process.

@@ -1,0 +1,3 @@
+2026-04-05 11:24:16,680 | INFO | person_detection.app | Starting webcam person detection with model 'yolov8n.pt'.
+2026-04-05 11:24:17,769 | WARNING | person_detection.app | Both show_window and save_output are disabled. The app will run headless until interrupted.
+2026-04-05 11:24:46,688 | INFO | person_detection.app | Webcam opened on index 0. Use Ctrl+C to stop the process.
